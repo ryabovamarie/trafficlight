@@ -9,7 +9,7 @@ notifications:
 before_deploy:
   - npm run build
   - mkdir build
-  - cp dist build/dist
+  - cp -r dist build/dist
   - cp index.html build/index.html
 
 
