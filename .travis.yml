@@ -8,9 +8,11 @@ notifications:
 
 before_deploy:
   - npm run build
+  - mkdir build && cp dist build/dist && cp index.html build/index.html
+
 
 deploy:
-  local_dir: "dist"
+  local_dir: "build"
   provider: pages
   skip-cleanup: true
   github-token: $GITHUB_TOKEN
